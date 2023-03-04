@@ -4,28 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://img2.freepng.es/20180407/ujw/kisspng-automated-teller-machine-computer-icons-atm-5ac9107694bb28.2912079515231263906092.jpg">
     <link rel="stylesheet" href="ATM.css">
     <title>ATM</title>
 </head>
 <body>
-       
+      
 <form action="">
-       <h1>BIENVENIDA GERA</h1>
-       <input type="button" value="Depositar" onclick="depositarDinero(this.form)">
-       <input type="button" value="retirar" onclick="retirarDinero(this.form)">
-<br>
-<br>
-    <h2>INSERTA TUS CREDENCIALES PARA</h2> 
-       <h2>OBTENER TU SALDO </h2>
-   <label for="">cuenta</label>
-   <input type="text" name="v" id="">
-   <label for="">contraseña</label>
-   <input type="password" name="p" id="">
-   <input type="button" value="saldo" onclick="verificarSaldo1(this.form)">
-   </br>
-   </br>
+
+    <h1>BIENVENIDA MALI</h1>
+    <h3>Saldo actual: <span id="saldo">8000</span></h3>
   
-</form>
+     
+         <div>
+             <b>Depósito</b>
+             <input type="checkbox" value="1" onchange="javascript:showContent1('deposito',this)" />
+             <div id="deposito" class="hide">
+                 Ingresa el Depósito a Realisar <input type="text" name="valor1">
+                 <br><input type="button" value="depositar" onclick="deposito()">
+             </div>
+         </div>
+  
+         <div>
+             <b>Retiro</b>
+             <input type="checkbox" value="1" onchange="javascript:showContent1('retiro',this)" />
+             <div id="error"></div>
+             <div id="retiro" class="hide">
+                 Ingresa el retiro a Realisar <input type="text" name="valor2">
+                 <br><input type="button" value="retirar" onclick="retiro1()">
+             </div>
+         </div>
+ 
+ 
+ </form>
    <script src="cajero.js"></script>
     
 </body>
